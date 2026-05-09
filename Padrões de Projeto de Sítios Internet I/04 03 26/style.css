@@ -1,0 +1,19 @@
+.frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 80px;
+}
+.frame:after {
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
+    content: '';
+    border-style: solid;
+    border-width: 70px;
+    border-image-source: url("http://img15.deviantart.net/75c0/i/2013/288/f/f/old_metal_frame_by_jojo_ojoj-d6qktx6.png");
+    border-image-slice: 360;
+    display: block;
+}

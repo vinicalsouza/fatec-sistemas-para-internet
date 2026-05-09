@@ -1,0 +1,105 @@
+* { box-sizing: border-box; }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #600;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 2px solid #ff0000;
+}
+
+.lock-icon { font-size: 70px; margin-bottom: 15px; }
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    margin: 20px 0;
+}
+
+.timer-box {
+    background: #000;
+    color: #ff0000;
+    padding: 15px;
+    border: 2px solid #fff;
+    margin: 20px 0;
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.seconds::after {
+    content: "00";
+    animation: countSeconds 60s infinite steps(60);
+}
+
+@keyframes countSeconds {
+    0% { content: "59"; }
+    1.66% { content: "58"; }
+    3.33% { content: "57"; }
+    100% { content: "00"; }
+}
+
+.warning-text {
+    color: #ffcc00;
+    font-size: 0.85em;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 60px;
+    overflow-y: auto;
+}
+
+h1 { color: #ff3333; font-size: 2.2em; }
+
+.instructions {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 5px;
+    line-height: 1.6;
+    border: 1px solid #333;
+}
+
+.bitcoin-address {
+    background: #000;
+    color: #0f0;
+    padding: 15px;
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+    border: 1px solid #0f0;
+}
+
+.footer-btns { margin-top: 30px; }
+
+.btn {
+    padding: 12px 25px;
+    margin-right: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: wait;
+}
+
+.btn-check { background-color: #444; color: #fff; }
+.btn-decrypt { background-color: #b00; color: #fff; }

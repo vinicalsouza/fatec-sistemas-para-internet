@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Laboratório de Position</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="topo-fixo">
+        Menu Fixo (position: fixed)
+    </header>
+
+    <main>
+        <h1>Entendendo o Posicionamento CSS</h1>
+
+        <section class="secao-exemplo">
+            <h2>1. Position: Static</h2>
+            <p>Este é o comportamento padrão. O elemento segue o fluxo natural da página, um abaixo do outro.</p>
+            <div class="caixa caixa-static">Sou Static</div>
+        </section>
+
+        <section class="secao-exemplo">
+            <h2>2. Position: Relative</h2>
+            <p>O elemento é movido em relação à sua posição original, mas o "buraco" que ele ocupava continua lá.</p>
+            <div class="caixa caixa-relative">Sou Relative (movi 20px)</div>
+        </section>
+
+        <section class="secao-exemplo">
+            <h2>3. Position: Absolute</h2>
+            <p>O elemento "voa" e se posiciona em relação ao seu pai que tenha position: relative.</p>
+            <div class="container-pai">
+                Pai (Relative)
+                <div class="caixa caixa-absolute">Sou Absolute</div>
+            </div>
+        </section>
+
+        <div style="height: 1000px; background: #f0f0f0; margin-top: 50px; padding: 20px;">
+            <p>Role para baixo para ver o Menu Fixo lá no topo e o Z-index abaixo...</p>
+        </div>
+
+        <section class="secao-exemplo">
+            <h2>4. Z-Index (Camadas)</h2>
+            <div class="camada-container">
+                <div class="camada camada-1">Z-index: 1</div>
+                <div class="camada camada-2">Z-index: 2 (Frente)</div>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="btn-subir">↑</a>
+
+</body>
+</html>
